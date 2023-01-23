@@ -1,5 +1,7 @@
 package hiber.model;
 
+import org.springframework.transaction.annotation.Transactional;
+
 import javax.persistence.*;
 
 @Entity
@@ -18,6 +20,9 @@ public class User {
 
    @Column(name = "email")
    private String email;
+
+
+
 
    public User() {}
    
