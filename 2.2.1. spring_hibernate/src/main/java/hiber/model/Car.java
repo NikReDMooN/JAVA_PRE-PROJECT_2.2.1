@@ -10,8 +10,7 @@ import javax.persistence.*;
 public class Car {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long id;
 
     @Column(name = "model")
     private String model;
@@ -21,7 +20,7 @@ public class Car {
     private Integer series;
 
     @OneToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
-    @JoinColumn(name = "user_id")
+    @MapsId
     private User user;
 
     public Car() {}
@@ -31,9 +30,7 @@ public class Car {
         this. series = series;
     }
 
-    public long getId() {
-        return id;
-    }
+
 
     public User getUser() {
         return user;

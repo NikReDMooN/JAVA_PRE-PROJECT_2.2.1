@@ -40,7 +40,6 @@ public class MainApp {
 
       List<Car> cars = carService.listCars();
       for (Car c : cars ) {
-         System.out.println("Id = " + c.getId());
          System.out.println("Model = " + c.getModel());
          System.out.println("Series = " + c.getSeries());
          System.out.println("user name = " + carService.getUser(c.getModel(), c.getSeries()).getFirstName());
